@@ -1,0 +1,487 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #40000000
+background-alt = #00000000
+;foreground = ${xrdb:color7:#222}
+foreground = #FFFFFF
+foreground-alt = #555
+primary = #FFFFFF
+secondary = #e60053
+alert = #bd2c40
+
+[bar/one]
+monitor = ${env:MONITOR:DisplayPort-2}
+width = 100%
+height = 25
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+#border-bottom-size = 1
+#border-bottom-color = #88c0d0
+
+padding-left = 0
+padding-right = 0
+
+padding = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = GothamRoundedMedium:pixelsize=12:antialias=true;2
+font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
+font-2 = siji:pixelsize=10;2
+
+font-3 = FontAwesome6FreeSolid:style=Solid:size=12;2
+font-4 = FontAwesome6FreeRegular:style=Regular:size=12;2
+font-5 = FontAwesome6BrandsRegular:style=Regular:size=12;2
+
+;font-0 = GothamRoundedMedium:style=Regular:size=10;4
+modules-left = i3
+modules-center = menu-apps
+modules-right = pulseaudio-control weather date
+
+tray-position = none
+tray-padding = 2
+tray-background = #222
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/four]
+monitor = ${env:MONITOR:DisplayPort-1}
+width = 100%
+height = 25
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+#border-bottom-size = 1
+#border-bottom-color = #88c0d0
+
+padding-left = 0
+padding-right = 0
+
+padding = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = GothamRoundedMedium:pixelsize=12:antialias=true;2
+font-1 = unifont:fontformat=truetype:size=8:antialias=true;2
+font-2 = siji:pixelsize=10;2
+
+font-3 = FontAwesome6FreeSolid:style=Solid:size=12;2
+font-4 = FontAwesome6FreeRegular:style=Regular:size=12;2
+font-5 = FontAwesome6BrandsRegular:style=Regular:size=12;2
+font-6 = Cryptocoin:style=Regular:size=12;2
+modules-left = i3 filesystem
+modules-center = menu-apps
+modules-right = crypto date
+
+tray-position = none
+tray-padding = 2
+tray-background = #222
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+[bar/two]
+monitor = ${env:MONITOR:DisplayPort-0}
+width = 100%
+height = 27
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+#border-bottom-size = 1
+#border-bottom-color = #88c0d0
+
+padding-left = 0
+padding-right = o
+
+module-margin-left = 1
+module-margin-right = 2
+
+
+font-0 = GothamRoundedMedium:pixelsize=12:antialias=true;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome6FreeSolid:style=Solid:size=12;2
+font-4 = FontAwesome6FreeRegular:style=Regular:size=12;2
+font-5 = FontAwesome6BrandsRegular:style=Regular:size=12;2
+
+
+modules-left = i3
+modules-center = menu-apps
+modules-right = cpu memory date
+
+tray-position = right
+tray-padding = 2
+tray-background = #40000000
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/three]
+monitor = ${env:MONITOR:HDMI-A-0}
+width = 100%
+height = 27
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+monitor-strict = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+#border-size = 0
+#border-color = #00000000
+#border-bottom-size = 1
+#border-bottom-color = #88c0d0
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+
+font-0 = GothamRoundedMedium:pixelsize=12:antialias=true;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = FontAwesome6FreeSolid:style=Solid:size=12;2
+font-4 = FontAwesome6FreeRegular:style=Regular:size=12;2
+font-5 = FontAwesome6BrandsRegular:style=Regular:size=12;2
+
+enable-ipc = true
+
+modules-left = i3
+modules-center = menu-apps
+modules-right = spotify spotify-prev spotify-play-pause spotify-next date
+
+tray-position = none
+tray-padding = 2
+tray-background = #00000000
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/filesystem]
+type = internal/fs
+
+; Mountpoints to display
+mount-0 = /
+mount-1 = /data
+mount-2 = /vault
+
+; Seconds to sleep between updates
+; Default: 30
+interval = 10
+
+; Display fixed precision values
+; Default: false
+fixed-values = true
+
+; Spacing between entries
+; Default: 2
+spacing = 4
+
+; Available tokens:
+;   %mountpoint%
+;   %type%
+;   %fsname%
+;   %percentage_free%
+;   %percentage_used%
+;   %total%
+;   %free%
+;   %used%
+; Default: %mountpoint% %percentage_free%%
+label-mounted = %mountpoint%: %free% Free
+
+[module/spotify]
+type = custom/script
+tail = true
+; prefix symbol is shown before the text
+format-prefix = "  "
+format = <label>
+exec = ~/.config/polybar/scripts/scroll_spotify_status.sh
+
+[module/spotify-prev]
+type = custom/script
+exec = echo ""
+format = <label>
+click-left = playerctl previous -p spotify
+
+[module/spotify-play-pause]
+type = custom/ipc
+hook-0 = echo ""
+hook-1 = echo ""
+initial = 1
+click-left = playerctl play-pause -p spotify
+
+[module/spotify-next]
+type = custom/script
+exec = echo ""
+format = <label>
+click-left = playerctl next -p spotify
+
+[module/crypto]
+type = custom/script
+label-foreground = #6ede8a
+interval = 300
+exec = /home/chris/.config/polybar/crypto.py
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+label-padding = 2
+label-foreground = ${colors.foreground}
+label-font = 0
+format-background = #40000000
+
+# Icons mixed from Font Awesome 5 and Material Icons
+# You can copy-paste your options for each possible action, which is more
+# trouble-free but repetitive, or apply only the relevant ones (for example
+# --sink-blacklist is only needed for next-sink).
+exec = pulseaudio-control --sink-nicknames-from "device.description" --sink-nickname "alsa_output.pci-0000_29_00.3.analog-stereo:" --sink-nickname "alsa_output.usb-PreSonus_AudioBox_22_VSL_2214-00.analog-stereo:" listen --format "$SINK_NICKNAME"
+click-right = exec pavucontrol &
+click-left = exec pulseaudio-control --sink-blacklist "alsa_output.pci-0000_27_00.1.hdmi-stereo-extra2" next-sink &
+scroll-up = exec pulseaudio-control --volume-max 130 up &
+scroll-down = exec pulseaudio-control --volume-max 130 down &
+
+[module/weather]
+type = custom/script
+exec = ~/polybar-forecast/polybar-forecast-linux-x86_64
+exec-if = ping openweathermap.org -c 1
+interval = 600
+label-font = 0
+format-padding = 2
+format-background = #40000000
+
+[module/menu-apps]
+type = custom/menu
+expand-right = true
+format-padding = 2
+label-open = 
+label-close = 
+label-separator = /
+format-spacing = 1
+format-background = #40000000
+
+menu-0-0 =  Chrome
+menu-0-0-exec = google-chrome-stable &
+menu-0-1 =  Files
+menu-0-1-exec = thunar &
+menu-0-2 =  Spotify
+menu-0-2-exec = spotify &
+menu-0-3 =  Steam
+menu-0-3-exec = steam &
+menu-0-4 =  Discord
+menu-0-4-exec = discord &
+menu-0-5 =  Melee
+menu-0-5-exec = ~/slippi &
+menu-0-6 =  GoTop
+menu-0-6-exec = urxvt -e gotop &
+menu-0-7 =  Lutris
+menu-0-7-exec = lutris &
+menu-0-8 =  Code
+menu-0-8-exec = code &
+menu-0-9 =  Power
+menu-0-9-exec = menu-open-1
+menu-1-0 =  Reboot
+menu-1-0-exec = systemctl reboot
+menu-1-1 =  Sleep
+menu-1-1-exec = systemctl suspend
+menu-1-2 =  Shutdown
+menu-1-2-exec = systemctl poweroff
+
+[module/launch_chrome]
+type = custom/text
+content =  Chrome
+click-left = google-chrome-stable &
+
+[module/launch_thunar]
+type = custom/text
+content =  Files
+click-left = thunar &
+
+[module/launch_steam]
+type = custom/text
+content =  Steam
+click-left = steam &
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+format-background = #40000000
+
+; focused = Active workspace on focused monitor
+;   %name%
+;   %icon%
+;   %index%
+;   %output%
+label-focused = %index%
+;label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+label-unfocused-foreground = #808080
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+;label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/cpu]
+type = internal/cpu
+interval = 5
+format-prefix = "CPU: "
+format-prefix-foreground = #FFFFFF
+;format-underline = #ffffff
+label = %percentage:2%%
+format-background = #40000000
+format-padding = 2
+
+[module/memory]
+type = internal/memory
+interval = 5
+format-prefix = "MEM: "
+format-prefix-foreground = #FFFFFF
+;format-underline = #ffffff
+label = %percentage_used%%
+format-background = #40000000
+format-padding = 2
+
+[module/date]
+type = internal/date
+interval = 1
+format-padding = 2
+format-background = #40000000
+date =
+date-alt = " %Y-%m-%d "
+
+time = %I:%M:%S 
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+;format-underline = #FFFFFF
+
+label = %date% %time% 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
